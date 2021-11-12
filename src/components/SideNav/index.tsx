@@ -6,12 +6,14 @@ const Index = () => {
 
 	const updateNav = () => {
 		let sections = document.querySelectorAll('section');
-		for (var i = 0; i < sections.length; i++) {
-			var windowHeight = window.innerHeight;
-			var elementTop = sections[i].getBoundingClientRect().top;
-			var elementVisible = 150;
+		for (let i = 0; i < sections.length; i++) {
+			let windowHeight = window.innerHeight;
+			let elementTop = sections[i].getBoundingClientRect().top;
+			let elementVisible = 150;
 
-			if (elementTop < windowHeight - elementVisible) {
+			console.log('windowHeight', windowHeight);
+			console.log('elementTop', elementTop);
+			if (elementTop > 0 && elementTop < windowHeight - elementVisible) {
 				const sectionId = sections[i].getAttribute('id');
 				setActiveSection(sectionId);
 			}

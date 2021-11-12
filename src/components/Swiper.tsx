@@ -20,6 +20,7 @@ export default function App() {
 			slidesPerView={'auto'}
 			spaceBetween={30}
 			freeMode={true}
+			grabCursor={true}
 			pagination={{
 				clickable: true,
 				type: 'progressbar',
